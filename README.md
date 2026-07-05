@@ -1,6 +1,6 @@
 # Webshop baza (PostgreSQL)
 
-Shema baze podataka za web trgovinu kolekcionarskim novčanicama — projekt s
+Shema baze podataka za web trgovinu kolekcionarskim novčanicama, projekt s
 kolegija Napredni SQL (Veleučilište u Bjelovaru). Baza je zamišljena kao temelj
 webshopa: korisnici i uloge, katalog s kategorijama i slikama, košarica,
 narudžbe, zalihe, kuponi, načini dostave te potpun audit i inventurni trag.
@@ -23,14 +23,14 @@ psql -d webshop -f views.sql
 ```
 
 Traži se ekstenzija `pgcrypto` (koristi se za UUID i hashiranje). Cijela shema
-prolazi na čistoj bazi bez ručnih zahvata — 20 tablica i 25 triggera.
+prolazi na čistoj bazi bez ručnih zahvata (20 tablica i 25 triggera).
 
 ## Sadržaj
 
-- `tables.sql` — tablice, ENUM tipovi, indeksi, JSONB metapodaci proizvoda
-- `psql.sql` — PL/pgSQL funkcije (skidanje zaliha, audit, kuponi, bodovi)
-- `triggers.sql` — triggeri koji te funkcije vežu na tablice
-- `views.sql` — admin view-ovi za izvještaje
+- `tables.sql`: tablice, ENUM tipovi, indeksi, JSONB metapodaci proizvoda
+- `psql.sql`: PL/pgSQL funkcije (skidanje zaliha, audit, kuponi, bodovi)
+- `triggers.sql`: triggeri koji te funkcije vežu na tablice
+- `views.sql`: admin view-ovi za izvještaje
 - ERD dijagram je u priloženom screenshotu
 
 Napomena: shema je namijenjena kao backend sloj za Node.js webshop; ovdje je
